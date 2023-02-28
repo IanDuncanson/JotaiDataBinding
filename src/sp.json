@@ -1,0 +1,63 @@
+{
+  "definition": {
+    "componentType": "box",
+    "children": [
+      {
+        "componentType": "box",
+        "props": {
+          "width": 500,
+          "height": 500,
+          "color": "lightsteelblue"
+        },
+        "context": {
+          "tagname": "Context bound text",
+          "precision": 2
+        },
+        "children": [
+          {
+            "componentType": "shape",
+            "props": {
+              "className": "sp-text-tagname",
+              "x": 10,
+              "y": 10,
+              "width": 250,
+              "height": 40,
+              "color": "teal",
+              "text": "Default Text"
+            }
+          },
+          {
+            "componentType": "shape",
+            "props": {
+              "className": "sp-text-tagname",
+              "x": 10,
+              "y": 110,
+              "width": 250,
+              "height": 40,
+              "color": "teal",
+              "text": "Default Text"
+            },
+            "bindings": {
+              "text": "{context:tagname}"
+            }
+          },
+          {
+            "componentType": "shape",
+            "props": {
+              "className": "sp-con-alp-pv",
+              "x": 10,
+              "y": 210,
+              "width": 250,
+              "height": 40,
+              "color": "teal",
+              "text": "Default Text"
+            },
+            "bindings": {
+              "text": "{data:#value}, {context:precision}, {transform:formatPrecision}"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
